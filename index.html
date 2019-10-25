@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>ZERO-X</title>
+
+    <link rel="apple-touch-icon" href="images/blackLogo.png">
+    <link rel="icon" href="images/transparentLogo.svg" sizes="800x800" type="image/png">
+
+    <meta charset="UTF-8">
+    <meta content='True' name='HandheldFriendly' />
+    <meta name="mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/fonts.css">
+
+    <script src="javascript/jquery.js"></script>
+    <script src="javascript/script.js"></script>
+
+</head>
+
+<!--the body... it holds everything.-->
+<body>
+
+    <!-- header -->
+    <div id="header">
+        <img src="images/transparentLogo.svg" style="display:inline-block; margin-left:5%; margin-top:9px;">
+        <div id="headerLinkContainer">
+            <div class="headerLink" onclick="scrollToElement('#productionHeader');">Catalog</div>
+            <div class="headerLink" onclick="scrollToElement('#pricingHeader');">Pricing</div>
+            <div class="headerLink" onclick="scrollToElement('#videoHeader');">Videos</div>
+            <div class="headerLink" onclick="scrollToElement('#contactHeader');">Contact</div>
+        </div>
+    </div>
+
+    <!--cover photo-->
+    <div id="coverPhoto"></div>
+
+    <!--social icons-->
+    <div id="socialContainer">
+        <div class="socialIcon"> <img src="images/youtubeLogo.svg" class="socialImage" onclick="window.open(socialURLs['youtube']);"> </div>
+        <div class="socialIcon"> <img src="images/soundcloudLogo.svg" class="socialImage" onclick="window.open(socialURLs['soundcloud']);"> </div>
+        <div class="socialIcon"> <img src="images/instagramLogo.svg" class="socialImage" onclick="window.open(socialURLs['instagram']);"> </div>
+        <div class="socialIcon"> <img src="images/facebookLogo.svg" class="socialImage" onclick="window.open(socialURLs['facebook']);"> </div>
+        <div class="socialIcon"> <img src="images/twitterLogo.svg" class="socialImage" onclick="window.open(socialURLs['twitter']);">  </div>
+        <span class="stretch"></span>
+    </div>
+
+    <!--audio player header-->
+    <img src="images/productionHeader.png" class="sectionHeader" id="productionHeader">
+
+    <!-- audio player -->
+    <iframe id="beatFrame" src="https://airbit.com/widgets/html5/?uid=410727&config=814803"
+            width="85%"
+            height="550"
+            scrolling="no"
+            frameborder="0"
+            marginwidth="0">
+    </iframe>
+
+
+    <!--pricing header-->
+    <img src="images/pricingHeader.png" class="sectionHeader" id="pricingHeader">
+
+    <!-- pricing container and images-->
+    <div id="leaseContainer">
+        <div class="leaseIcon"> <img src="images/leaseMP3.png" class="leaseImage" onclick="scrollToElement('#productionHeader');">       </div>
+        <div class="leaseIcon"> <img src="images/leaseWAV.png" class="leaseImage" onclick="scrollToElement('#productionHeader');">       </div>
+        <div class="leaseIcon"> <img src="images/leaseTrackout.png" class="leaseImage" onclick="scrollToElement('#productionHeader');">  </div>
+        <div class="leaseIcon"> <img src="images/leaseExclusive.png" class="leaseImage" onclick="scrollToElement('#productionHeader');"> </div>
+        <span class="stretch"></span>
+    </div>
+
+
+    <!-- videos header-->
+    <img src="images/visualsHeader.png" class="sectionHeader" id="videoHeader">
+
+    <!-- videos player -->
+    <div id="videoWrapper">
+        <iframe width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/videoseries?list=PLvwWorgsJ3G4WgB0ByOjl65r5naODlm6E"
+                allow="autoplay; encrypted-media"
+                frameborder="0"
+                allowfullscreen>
+        </iframe>
+    </div>
+
+
+    <!-- contact header placeholder -->
+    <img src="images/contactHeader.png" class="sectionHeader" id="contactHeader">
+
+    <!-- contact container placeholder -->
+    <div id="contactContainer">
+        <div id="contactCenter">
+            <form id="contactForm" action="https://formspree.io/gperry91@gmail.com" method="POST">
+                <input type="email" placeholder="Email" name="email" class="inputField"><br>
+                <textarea placeholder="Message" name="message" cols="40" rows="5" class="inputField"></textarea>
+                <br>
+                <input type="image" name="submit" src="images/sendButton.png" alt="Submit">
+            </form>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div id="footer">
+       <div style="margin-top:10px; margin-left:8px;">
+           © ZERO-X 2019. All rights reserved.
+       </div>
+    </div>
+
+</body>
+</html>
